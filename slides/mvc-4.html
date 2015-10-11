@@ -1,0 +1,12 @@
+<p>Chargement automatique de l'objet dans l'action du controller</p>
+<pre><code data-trim contenteditable class="php">
+class PostController extends \TYPO3\CMS\Extbase\MVC\Controller\ActionController {
+    /**
+     * @var \Pitchart\Blog\Domain\Model\PostInterface
+     */
+    public function showAction(\Pitchart\Blog\Domain\Model\PostInterface $post) {
+        $this->view->assign('post', $post);
+    }
+}
+</code></pre>
+<p class="fragment">Utilisation des annotation et de la configuration du gestionnaire d'objet</p>
