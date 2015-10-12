@@ -1,3 +1,4 @@
+<section>
 <p>Configuration TypoScript :</p>
 <pre><code data-trim contenteditable class="typoscript">
 # Configuration globale
@@ -14,3 +15,22 @@ plugin.tx_blog.objects {
     }
 }
 </code></pre>
+</section>
+<section>
+<h3>Surcharge de classe (<span class="php-color">Reflection</span>)</h3>
+<p>XCLASSES (historique)</p>
+<pre><code data-trim contenteditable class="hljs php">
+// ext_localconf.php
+$GLOBALS['TYPO3_CONF_VARS']['SYS']['Objects']['TYPO3\CMS\Backend\Controller\NewRecordController'] = array(
+ 'className' => 'Pitchart\Blog\Xclass\NewRecordController'
+);	
+</code></pre>
+<p>depuis TYPO3 CMS 6</p>
+<pre><code data-trim contenteditable class="typoscript">
+config.tx_extbase.objects {
+    Pitchart\Blog\Service\ExampleInterface {
+        className = Pitchart\Blog\Service\Example
+    }
+}
+</code></pre>
+</section>
