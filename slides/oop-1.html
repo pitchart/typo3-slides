@@ -10,9 +10,9 @@ protected $objectManager;
  */
 public function doSomethingAction() {
 
-    $example = new \Pitchart\Blog\Domain\Model\Post();
+    $example = new \Pitchart\Blog\Domain\Model\Post($arg1, $arg2);
     // remplacé par :
-    $example = $this->objectManager->get('Pitchart\Blog\Domain\Model\Post');
+    $example = $this->objectManager->get('Pitchart\Blog\Domain\Model\Post', $arg1, $arg2);
 
 }
 </code></pre>

@@ -23,7 +23,7 @@ class Post {
 namespace TYPO3\CMS\Extbase\Validation\Validator;
 
 interface ValidatorInterface {
-    public function getErrors(); // message d'erreur
+    public function getErrors();
     public function isValid($value); 
     public function setOptions(array $validationOptions);
 }
@@ -34,6 +34,7 @@ class Post {
     /**
      * @var string
      * @validate StringLength(maximum=80)
+     * @validate \Pitchart\Blog\Domain\Validator\TitleValidator
      */
     protected $title;
 }
