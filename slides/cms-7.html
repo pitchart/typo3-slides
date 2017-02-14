@@ -1,0 +1,29 @@
+<section>
+	<h2>Mise en cache(s)</h2>
+	<p>Caching framework : différents niveaux de cache</p>
+	<ul>
+		<li><span class="t3-color">cache_core</span> : fichiers de configuration</li>
+		<li><span class="t3-color">cache_classes</span> : chargement des classes</li>
+		<li><span class="t3-color">cache_pages / cache_pagesection</span> : rendu frontend des pages et sections de pages (blocs de contenu, objets typoscript)</li>
+		<li><span class="t3-color">l10n</span> : localisation</li>
+		<li>...</li>
+	</ul>
+	<p>Nettoyage du cache par tâche plannifiée.</p>	
+</section>
+<section>
+	<h2>Implémentations</h2>
+	<h3>Frontends</h3>
+	<p>String frontend / Variable frontend / PHP Frontend</p>
+	<p>Utilisation de tags pour faciliter la purge</p>
+	<h3>Backends</h3>
+	<p>Database / Memcached / Redis / APC / Xcache / File / PDO / Memory / OPcache / Wincache</p>
+</section>
+<section>
+	<h2>Cache statique (<span class="t3-color">nc_staticfilecache</span>)</h2>
+	<ul>
+		<li>Stockage des rendus HTML sous forme de fichier</li>
+		<li>Configuration de la durée de vie par page</li>
+		<li>Purge plannifiée</li>
+		<li><span class="t3-color">Hooks</span> / <span class="t3-color">SignalSlots</span> (Observer) lors de la modification d'enregistrements pour une purge ciblée</li>
+	</ul>
+</section>
